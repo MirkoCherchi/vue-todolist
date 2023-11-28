@@ -1,4 +1,14 @@
-.true {
+body{
+    background-color: rgb(253, 122, 70);
+}
+
+.istrue {
     text-decoration: line-through;
     color: #000;
 }
+
+.fa-xmark{
+    color: red;
+    cursor: pointer;
+}
+

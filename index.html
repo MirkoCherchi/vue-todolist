@@ -40,9 +40,13 @@
                 <div class="row">
                     <div class="col-md-7 mx-auto">
                         <ul class="list-group">
-                            <li v-for="(obj, index) in objs" :class="{'true': isDone(obj) }" class="list-group-item">{{
+                            <li v-for="(obj, index) in objs" :class="{'istrue': isDone(obj) }"
+                                class="list-group-item d-flex justify-content-between align-items-center">{{
                                 obj.text
-                                }}</li>
+                                }}
+                                <div><i class="fa-solid fa-xmark" @click="deleteObj(index)"></i></div>
+                            </li>
+
                         </ul>
                     </div>
                 </div>
