@@ -43,7 +43,8 @@
                         <div class="input-group mb-3">
 
                             <input type="text" class="form-control" placeholder="Insert Todo"
-                                aria-label="Recipient's username" aria-describedby="button-addon2" v-model="newObj">
+                                aria-label="Recipient's username" aria-describedby="button-addon2" v-model="newObj"
+                                @keyup.enter="addNewObj">
                             <button class="btn btn-success" type="button" id="buttoninput"
                                 @click="addNewObj">Add</button>
                         </div>
