@@ -39,6 +39,14 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-7 mx-auto">
+                        <label for="buttoninput" class="pb-2">Add new Todo:</label>
+                        <div class="input-group mb-3">
+
+                            <input type="text" class="form-control" placeholder="Insert Todo"
+                                aria-label="Recipient's username" aria-describedby="button-addon2" v-model="newObj">
+                            <button class="btn btn-success" type="button" id="buttoninput"
+                                @click="addNewObj">Add</button>
+                        </div>
                         <ul class="list-group">
                             <li v-for="(obj, index) in objs" :class="{'istrue': isDone(obj) }"
                                 class="list-group-item d-flex justify-content-between align-items-center">{{
