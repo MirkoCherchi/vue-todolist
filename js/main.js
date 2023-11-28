@@ -27,5 +27,9 @@ const { createApp } = Vue
                 this.newObj = '';
             }
         },
+         
+        isFalse(index) {
+            this.objs[index].done = !this.objs[index].done;
+        },
     },
   }).mount('#app')
