@@ -48,19 +48,20 @@
                             <button class="btn btn-success" type="button" id="buttoninput"
                                 @click="addNewObj">Add</button>
                         </div>
-                        <ul class="list-group">
+                        <ul class="list-group" v-if="objs.length > 0">
                             <li v-for="(obj, index) in objs" :class="{'istrue': isDone(obj) }"
                                 class="list-group-item d-flex justify-content-between align-items-center"
-                                @click="isFalse(index)" v-if="objs.length > 0">{{
+                                @click="isFalse(index)">{{
                                 obj.text
                                 }}
                                 <div><i class="fa-solid fa-xmark" @click.stop="deleteObj(index)"></i></div>
                             </li>
-                            <div class="alert alert-danger" role="alert" v-else>
-                                The list is empty.
-                            </div>
+
 
                         </ul>
+                        <div class="alert alert-danger" role="alert" v-else>
+                            The list is empty.
+                        </div>
                     </div>
                 </div>
 
