@@ -5,6 +5,7 @@ body{
 .istrue {
     text-decoration: line-through;
     color: #000;
+    background-color: rgb(80, 231, 136);
 }
 
 .fa-xmark{
